@@ -1,0 +1,12 @@
+version: '3'
+services:
+    amqp_listener_app:
+      image: ykizilay/amqp_listener_app:0.0.1
+      container_name: amqp_listener_app
+      ports:
+         - 8085:8085 
+      environment:
+        - RABBIT_HOST=172.20.0.1
+        - RABBIT_PORT=5672
+        - RABBIT_USERNAME=ykizilay
+        - RABBIT_PASSWORD=1234
